@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Business Plan Generator - KEDIN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Minimal header for tool pages -->
+    <div class="bg-green-700 text-white py-4 px-6 flex items-center">
+        <a href="ai-tools.html" class="text-white hover:underline">&larr; Back to AI Tools</a>
+        <h1 class="text-2xl font-bold ml-6">Business Plan Generator</h1>
+    </div>
+
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+            <p class="text-gray-600 mb-8">Describe your business idea and industry. Our AI (Gemma 4) will instantly generate a professional business plan.</p>
+            
+            <form id="plan-form" class="space-y-6">
+                <div>
+                    <label class="block font-medium mb-2">Business Idea</label>
+                    <textarea id="business-idea" rows="4" placeholder="e.g., A poultry farming business in Kano producing organic eggs and broilers for local hotels..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"></textarea>
+                </div>
+                <div>
+                    <label class="block font-medium mb-2">Industry</label>
+                    <select id="industry" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+                        <option>Agriculture</option>
+                        <option>Technology</option>
+                        <option>Retail</option>
+                        <option>Manufacturing</option>
+                        <option>Services</option>
+                        <option>Creative Arts</option>
+                    </select>
+                </div>
+                <button type="submit" id="submit-btn" class="btn-gradient text-white font-bold py-3 px-8 rounded-full">Generate Plan</button>
+            </form>
+
+            <div id="loading" class="hidden mt-6 text-center">
+                <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-green-700"></div>
+                <p class="mt-2 text-gray-600">Gemma 4 is writing your plan...</p>
+            </div>
+
+            <div id="result" class="hidden mt-8 p-6 bg-gray-100 rounded-lg">
+                <h2 class="font-bold text-xl mb-4">Your Business Plan</h2>
+                <pre id="plan-content" class="whitespace-pre-wrap text-gray-700 font-sans"></pre>
+                <button id="copy-btn" class="mt-4 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded">Copy Plan</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // IMPORTANT: Replace this with your deployed Cloud Run URL after setting up the backend.
+        const API_BASE_URL = 'https://YOUR-CLOUD-RUN-URL.a.run.app';
+
+        const form = document.getElementById('plan-form');
+        const loading = document.getElementById('loading');
+        const result = document.getElementById('result');
+        const planContent = document.getElementById('plan-content');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const idea = document.getElementById('business-idea').value;
+            const industry = document.getElementById('industry').value;
+            if (!idea) { alert('Please describe your business idea.'); return; }
+
+            loading.classList.remove('hidden');
+            result.classList.add('hidden');
+            try {
+                const response = await fetch(`${API_BASE_URL}/business-plan`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ business_idea: idea, industry: industry })
+                });
+                const data = await response.json();
+                planContent.textContent = data.plan;
+                result.classList.remove('hidden');
+            } catch (error) {
+                alert('Error generating plan. Please try again.');
+                console.error(error);
+            } finally {
+                loading.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('copy-btn').addEventListener('click', () => {
+            navigator.clipboard.writeText(planContent.textContent);
+            alert('Business plan copied!');
+        });
+    </script>
+</body>
+</html>
