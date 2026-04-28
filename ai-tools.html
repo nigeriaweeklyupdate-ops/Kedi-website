@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools - KEDIN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="images/logo.png" alt="KEDIN Logo" class="w-12 h-12 object-contain">
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800">KEDIN</h1>
+                    <p class="text-xs text-gray-500">Kano State Entrepreneurship Dev. Institute</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-green-700">Home</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-green-700">About</a>
+                <a href="services.html" class="nav-link text-gray-600 hover:text-green-700">Services</a>
+                <a href="team.html" class="nav-link text-gray-600 hover:text-green-700">Team</a>
+                <a href="news.html" class="nav-link text-gray-600 hover:text-green-700">News</a>
+                <a href="ai-tools.html" class="nav-link text-green-700 border-b-2 border-green-700 pb-1">AI Tools</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-green-700">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-4 pb-4 flex flex-col space-y-3">
+            <a href="index.html" class="text-gray-600">Home</a>
+            <a href="about.html" class="text-gray-600">About</a>
+            <a href="services.html" class="text-gray-600">Services</a>
+            <a href="team.html" class="text-gray-600">Team</a>
+            <a href="news.html" class="text-gray-600">News</a>
+            <a href="ai-tools.html" class="text-green-700 font-medium">AI Tools</a>
+            <a href="contact.html" class="text-gray-600">Contact</a>
+        </div>
+    </header>
+
+    <section class="bg-purple-700 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">🤖 AI-Powered Business Tools</h1>
+            <p class="text-xl opacity-90">Free tools powered by Google Gemma 4</p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-green-50 p-8 rounded-xl shadow-lg text-center card-hover">
+                <i class="fas fa-file-alt text-5xl text-green-600 mb-4"></i>
+                <h2 class="text-2xl font-bold mb-3">Business Plan Generator</h2>
+                <p class="text-gray-600 mb-6">Create a professional business plan in seconds.</p>
+                <a href="ai-business-plan.html" class="btn-gradient text-white font-bold py-3 px-6 rounded-full">Launch Tool</a>
+            </div>
+            <div class="bg-blue-50 p-8 rounded-xl shadow-lg text-center card-hover">
+                <i class="fas fa-chart-pie text-5xl text-blue-600 mb-4"></i>
+                <h2 class="text-2xl font-bold mb-3">Market Survey Assistant</h2>
+                <p class="text-gray-600 mb-6">Design survey questions and analyze markets.</p>
+                <a href="ai-market-survey.html" class="btn-gradient text-white font-bold py-3 px-6 rounded-full" style="background: linear-gradient(135deg, #2563eb, #1d4ed8);">Launch Tool</a>
+            </div>
+            <div class="bg-yellow-50 p-8 rounded-xl shadow-lg text-center card-hover">
+                <i class="fas fa-graduation-cap text-5xl text-yellow-600 mb-4"></i>
+                <h2 class="text-2xl font-bold mb-3">Professional Courses</h2>
+                <p class="text-gray-600 mb-6">Get personalized entrepreneurship curricula.</p>
+                <a href="ai-courses.html" class="btn-gradient text-white font-bold py-3 px-6 rounded-full" style="background: linear-gradient(135deg, #d97706, #b45309);">Start Learning</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 KEDIN. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
