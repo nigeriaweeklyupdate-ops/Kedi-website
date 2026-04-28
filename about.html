@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About KEDIN - Kano State Entrepreneurship Development Institute</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER (same as index.html) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="images/logo.png" alt="KEDIN Logo" class="w-12 h-12 object-contain">
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800">KEDIN</h1>
+                    <p class="text-xs text-gray-500">Kano State Entrepreneurship Dev. Institute</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-green-700">Home</a>
+                <a href="about.html" class="nav-link text-green-700 border-b-2 border-green-700 pb-1">About</a>
+                <a href="services.html" class="nav-link text-gray-600 hover:text-green-700">Services</a>
+                <a href="team.html" class="nav-link text-gray-600 hover:text-green-700">Team</a>
+                <a href="news.html" class="nav-link text-gray-600 hover:text-green-700">News</a>
+                <a href="ai-tools.html" class="nav-link text-gray-600 hover:text-green-700">AI Tools</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-green-700">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-4 pb-4 flex flex-col space-y-3">
+            <a href="index.html" class="text-gray-600">Home</a>
+            <a href="about.html" class="text-green-700 font-medium">About</a>
+            <a href="services.html" class="text-gray-600">Services</a>
+            <a href="team.html" class="text-gray-600">Team</a>
+            <a href="news.html" class="text-gray-600">News</a>
+            <a href="ai-tools.html" class="text-gray-600">AI Tools</a>
+            <a href="contact.html" class="text-gray-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="bg-green-700 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">About KEDIN</h1>
+            <p class="text-xl opacity-90">The story behind Kano's entrepreneurship revolution</p>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">Our History</h2>
+            <p class="text-gray-700 leading-relaxed mb-6">
+                The Entrepreneurship Development Institute (EDI) is an initiative of the visionary administration of Dr. Rabiu Musa Kwankwaso, who in 2012 established 26 entrepreneurship institutes across Kano. These centers were designed to tackle unemployment head-on by providing practical skills training. After years of neglect, Governor Abba Kabir Yusuf (Abba Gida Gida) revived the institutes in 2024, restructuring them into what is now the Kano Entrepreneurship Development Institute (KEDI / KEDIN).
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-6">
+                Since revival, KEDIN has trained over 5,870 individuals in diverse fields: poultry, livestock, fisheries, informatics, film production, driving, and more. The institute has graduated batches with tools, cash, and startup support, directly contributing to the state’s GDP and reducing reliance on white-collar jobs.
+            </p>
+            <h3 class="text-2xl font-bold mt-12 mb-4 text-gray-800">Our Mandate</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Provide free, practical skills training to Kano youth and women.</li>
+                <li>Empower graduates with starter packs and seed capital.</li>
+                <li>Partner with local and international bodies for curriculum development.</li>
+                <li>Foster innovation through ICT and modern farming techniques.</li>
+                <li>Create a sustainable pipeline of entrepreneurs who will build Kano's future.</li>
+            </ul>
+            <h3 class="text-2xl font-bold mt-12 mb-4 text-gray-800">Key Achievements</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <div class="bg-gray-50 p-6 rounded-lg shadow card-hover">
+                    <p class="text-4xl font-bold text-green-600">5,870+</p>
+                    <p class="text-gray-600">Youth & Women Trained</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow card-hover">
+                    <p class="text-4xl font-bold text-blue-600">26</p>
+                    <p class="text-gray-600">Skills Institutes</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow card-hover">
+                    <p class="text-4xl font-bold text-yellow-600">9,000+</p>
+                    <p class="text-gray-600">Starter Packs Distributed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 KEDIN. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
