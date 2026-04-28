@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kano State Entrepreneurship Development Institute (KEDIN) - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- HEADER (identical across all pages, you can copy this block) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="images/logo.png" alt="KEDIN Logo" class="w-12 h-12 object-contain">
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800">KEDIN</h1>
+                    <p class="text-xs text-gray-500">Kano State Entrepreneurship Dev. Institute</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="nav-link text-green-700 border-b-2 border-green-700 pb-1">Home</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-green-700">About</a>
+                <a href="services.html" class="nav-link text-gray-600 hover:text-green-700">Services</a>
+                <a href="team.html" class="nav-link text-gray-600 hover:text-green-700">Team</a>
+                <a href="news.html" class="nav-link text-gray-600 hover:text-green-700">News</a>
+                <a href="ai-tools.html" class="nav-link text-gray-600 hover:text-green-700">AI Tools</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-green-700">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-4 pb-4 flex flex-col space-y-3">
+            <a href="index.html" class="text-green-700 font-medium">Home</a>
+            <a href="about.html" class="text-gray-600">About</a>
+            <a href="services.html" class="text-gray-600">Services</a>
+            <a href="team.html" class="text-gray-600">Team</a>
+            <a href="news.html" class="text-gray-600">News</a>
+            <a href="ai-tools.html" class="text-gray-600">AI Tools</a>
+            <a href="contact.html" class="text-gray-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION with 7-image slider -->
+    <section class="hero-slider h-[600px] flex items-center justify-center text-white text-center relative" style="background-image: url('images/hero1.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 fade-in">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4">Empowering Kano's Future Entrepreneurs</h2>
+            <p class="text-xl mb-8">Governor Abba Gida Gida's vision for a self-reliant, skilled, and prosperous Kano State.</p>
+            <a href="ai-tools.html" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg">Try Our AI Business Tools</a>
+        </div>
+        <!-- Slider Dots (7 dots) -->
+        <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+            <span class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer" data-slide="0"></span>
+            <span class="slider-dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer" data-slide="1"></span>
+            <span class="slider-dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer" data-slide="2"></span>
+            <span class="slider-dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer" data-slide="3"></span>
+            <span class="slider-dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer" data-slide="4"></span>
+            <span class="slider-dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer" data-slide="5"></span>
+            <span class="slider-dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer" data-slide="6"></span>
+        </div>
+    </section>
+
+    <!-- VISION & MISSION -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-green-50 p-8 rounded-lg shadow-sm border border-green-100 fade-in card-hover">
+                <i class="fas fa-eye text-4xl text-green-700 mb-4"></i>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Our Vision</h3>
+                <p class="text-gray-700 leading-relaxed">To be the leading catalyst for economic transformation in Kano State by creating a vibrant ecosystem of skilled, innovative, and self-reliant entrepreneurs who drive sustainable growth and job creation.</p>
+            </div>
+            <div class="bg-blue-50 p-8 rounded-lg shadow-sm border border-blue-100 fade-in card-hover">
+                <i class="fas fa-bullseye text-4xl text-blue-700 mb-4"></i>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Our Mission</h3>
+                <p class="text-gray-700 leading-relaxed">To provide world-class entrepreneurship training, mentorship, and access to resources, enabling Kano's youth and women to launch and scale successful businesses that contribute to the state's economic prosperity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRIEF HISTORY -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">A Legacy of Empowerment</h2>
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md fade-in">
+                <p class="text-gray-700 leading-relaxed mb-4">The Kano Entrepreneurship Development Institute (KEDI) is at the heart of Governor Abba Kabir Yusuf's mission to revitalize the 26 entrepreneurship centers established by the Dr. Rabiu Musa Kwankwaso administration. Since its revival in 2024, KEDIN has trained and empowered over 5,870 youth and women across various sectors including poultry, livestock, fisheries, informatics, and film production.</p>
+                <p class="text-gray-700 leading-relaxed">Our mandate is clear: to equip the next generation with practical, marketable skills that reduce unemployment and foster self-reliance. We are building a sustainable entrepreneurial ecosystem for Kano State's long-term economic growth.</p>
+                <a href="about.html" class="mt-4 inline-block text-green-700 font-medium hover:underline">Read full history →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS HIGHLIGHTS -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Core Programs</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-green-500 card-hover">
+                    <i class="fas fa-laptop-code text-4xl text-green-600 mb-3"></i>
+                    <h3 class="font-bold text-xl mb-2">Informatics & Tech</h3>
+                    <p class="text-gray-600">Software development, digital literacy, and IT support.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500 card-hover">
+                    <i class="fas fa-tractor text-4xl text-blue-600 mb-3"></i>
+                    <h3 class="font-bold text-xl mb-2">Agribusiness</h3>
+                    <p class="text-gray-600">Poultry, livestock, fisheries, and horticulture.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-yellow-500 card-hover">
+                    <i class="fas fa-newspaper text-4xl text-yellow-600 mb-3"></i>
+                    <h3 class="font-bold text-xl mb-2">Creative Arts</h3>
+                    <p class="text-gray-600">Film production, journalism, and digital media.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-red-500 card-hover">
+                    <i class="fas fa-tools text-4xl text-red-600 mb-3"></i>
+                    <h3 class="font-bold text-xl mb-2">Artisan & Technical</h3>
+                    <p class="text-gray-600">Driving, fisheries, and vocational skills.</p>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="services.html" class="btn-gradient text-white font-bold py-3 px-8 rounded-full">View All Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI TOOLS TEASER -->
+    <section class="py-16 bg-gradient-to-r from-green-50 to-blue-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">🤖 AI-Powered Business Tools</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">Leverage Google's Gemma 4 AI to generate business plans, conduct market surveys, and access professional courses — for free.</p>
+            <a href="ai-tools.html" class="btn-gradient text-white font-bold py-3 px-8 rounded-full">Explore AI Tools</a>
+        </div>
+    </section>
+
+    <!-- LATEST NEWS PREVIEW -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Latest News</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <img src="images/news1.jpg" alt="Empowerment" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Kano empowers 2,260 Youths</h3>
+                        <p class="text-gray-600 mb-4">Governor rolls out empowerment packages.</p>
+                        <a href="news.html" class="text-green-700 font-medium hover:underline">Read More →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <img src="images/news2.jpg" alt="Revival" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Revival of 3 Institutes</h3>
+                        <p class="text-gray-600 mb-4">Poultry, Journalism, Fisheries back in operation.</p>
+                        <a href="news.html" class="text-green-700 font-medium hover:underline">Read More →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <img src="images/news3.jpg" alt="Self Reliance" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Targeting 50,000 Youths</h3>
+                        <p class="text-gray-600 mb-4">Ambitious plan for self-reliance.</p>
+                        <a href="news.html" class="text-green-700 font-medium hover:underline">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 Kano State Entrepreneurship Development Institute (KEDIN). All rights reserved.</p>
+            <p class="text-gray-400 text-sm mt-2">Empowering Kano's Youth for a Self-Reliant Future.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
