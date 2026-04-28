@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - KEDIN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="images/logo.png" alt="KEDIN Logo" class="w-12 h-12 object-contain">
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800">KEDIN</h1>
+                    <p class="text-xs text-gray-500">Kano State Entrepreneurship Dev. Institute</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-green-700">Home</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-green-700">About</a>
+                <a href="services.html" class="nav-link text-gray-600 hover:text-green-700">Services</a>
+                <a href="team.html" class="nav-link text-gray-600 hover:text-green-700">Team</a>
+                <a href="news.html" class="nav-link text-green-700 border-b-2 border-green-700 pb-1">News</a>
+                <a href="ai-tools.html" class="nav-link text-gray-600 hover:text-green-700">AI Tools</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-green-700">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-4 pb-4 flex flex-col space-y-3">
+            <a href="index.html" class="text-gray-600">Home</a>
+            <a href="about.html" class="text-gray-600">About</a>
+            <a href="services.html" class="text-gray-600">Services</a>
+            <a href="team.html" class="text-gray-600">Team</a>
+            <a href="news.html" class="text-green-700 font-medium">News</a>
+            <a href="ai-tools.html" class="text-gray-600">AI Tools</a>
+            <a href="contact.html" class="text-gray-600">Contact</a>
+        </div>
+    </header>
+
+    <section class="bg-red-700 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Latest News & Headlines</h1>
+            <p class="text-xl opacity-90">Stay informed about KEDIN's impact</p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl grid grid-cols-1 gap-8">
+            <article class="bg-white rounded-lg shadow-md overflow-hidden card-hover flex flex-col md:flex-row">
+                <img src="images/news1.jpg" alt="Empowerment" class="w-full md:w-48 h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Kano empowers 2,260 Youths with skills, tools, cash</h2>
+                    <p class="text-gray-600">Governor Abba Kabir Yusuf rolls out empowerment packages to graduates of eight entrepreneurship skills institutes. Beneficiaries received tools like grinding machines, clippers, and laptops.</p>
+                    <a href="#" class="text-green-700 font-medium hover:underline mt-3 inline-block">Read more →</a>
+                </div>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden card-hover flex flex-col md:flex-row">
+                <img src="images/news2.jpg" alt="Revival" class="w-full md:w-48 h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Gov Yusuf revives three entrepreneurship institutes</h2>
+                    <p class="text-gray-600">Poultry, Development Journalism, and Artisan Fisheries Institutes back in operation, admitting over 1,000 new students.</p>
+                    <a href="#" class="text-green-700 font-medium hover:underline mt-3 inline-block">Read more →</a>
+                </div>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden card-hover flex flex-col md:flex-row">
+                <img src="images/news3.jpg" alt="Self Reliance" class="w-full md:w-48 h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Self Reliance: Kano targets 50,000 youths for skills training</h2>
+                    <p class="text-gray-600">Ambitious program to equip youth with practical skills across multiple sectors to reduce unemployment.</p>
+                    <a href="#" class="text-green-700 font-medium hover:underline mt-3 inline-block">Read more →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 KEDIN. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
