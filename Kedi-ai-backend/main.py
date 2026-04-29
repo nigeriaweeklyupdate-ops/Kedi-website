@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY", "YOUR_GOOGLE_AI_STUDIO_API_KEY")
+GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY", "AIzaSyAKs95vFXMbMYyhuQ4dgQazHNlv14rWcJY")
 genai.configure(api_key=GOOGLE_API_KEY)
 
 class BusinessPlanRequest(BaseModel):
