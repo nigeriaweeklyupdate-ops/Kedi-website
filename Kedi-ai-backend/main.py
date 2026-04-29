@@ -25,7 +25,7 @@ class PromptRequest(BaseModel):
 
 @app.get("/")
 async def root():
-    return {"message": "KEDIN AI Backend is running"}
+    return {"message": "KEDI AI Backend is running"}
 
 @app.post("/business-plan")
 async def business_plan(request: BusinessPlanRequest):
